@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Web</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            /* overflow: hidden; */
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        @font-face {
+            font-family: "Fredoka";
+            src: url("Fonts/FredokaOne-Regular.ttf") format('truetype');
+        }
+
+        .TopBar{
+            width: 100%;
+            min-width: 400px;
+            position: fixed;
+            padding: 20px;
+            background-color: rgb(128, 7, 176);
+            top: 0;
+            box-shadow: 0 20px 50px rgb(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: row;
+        }
+
+        .TopBarH1{
+            margin: 0;
+            margin-left: 30px;
+            color: white;
+            font-family: "Fredoka", serif;
+            font-weight: bold;
+            font-size: 35px;
+            -webkit-text-stroke: 1px rgb(4, 4, 4);
+        }
+
+        .TopBarImg{
+            width: 50px;
+            border-radius: 10px;
+            margin: 0;
+            margin-left: 20px;
+            cursor: pointer;
+            transition: 100ms ease;
+        }
+
+        .TopBarImg:hover{
+            scale: 1.2;
+        }
+
+        .MainCard{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 20px;
+            width: clamp(250px, 70%, 1200px);
+            min-height: clamp(450px, 50vh, 700px);
+            height: auto;
+            margin: 0;
+            margin-top: 70px;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgb(0, 0, 0, 0.5);
+        }
+
+        .MusicCard{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .MusicCardImg {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+        }
+
+        .MusicCardButton{
+            width: 30px;
+            cursor: pointer;
+            transition: 100ms ease;
+            margin: 0;
+        }
+
+        .MusicCardName {
+            margin: 5px;
+        }
+
+        .Musics {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="TopBar">
+        <img src="Images/logo.jpg" alt="" class="TopBarImg">
+        <h1 class="TopBarH1">Muzic By Aldan</h1>
+    </div>
+    <div class="MainCard">
+        <div class="MusicCard" id="Lagu">
+            <img src="Images/mylove.jpeg" alt="" class="MusicCardImg">
+            <div class="Musics">
+                <p class="MusicCardName">My Love</p>
+                <img src="Images/playimg.png" alt="" class="MusicCardButton" id="MyLoveSong">
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
