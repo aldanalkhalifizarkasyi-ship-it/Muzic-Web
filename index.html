@@ -62,7 +62,8 @@
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
-            flex-direction: column;
+            flex-direction: row;
+            flex-wrap: wrap;
             padding: 20px;
             width: clamp(250px, 70%, 1200px);
             min-height: clamp(450px, 50vh, 700px);
@@ -77,14 +78,22 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: row;
+            flex-direction: column;
             gap: 20px;
         }
 
         .MusicCardImg {
-            width: 80px;
-            height: 80px;
+            width: clamp(100px, 20%, 120px);
+            height: 100px;
             border-radius: 20px;
+            margin: 0;
+            margin-left: 10px;
+            margin-top: 10px;
+            transition: 100ms ease;
+        }
+
+        .MusicCardImg:hover {
+            scale: 1.2;
         }
 
         .MusicCardButton{
@@ -96,6 +105,8 @@
 
         .MusicCardName {
             margin: 5px;
+            width: 120px;
+            text-align: center;
         }
 
         .Musics {
@@ -114,10 +125,18 @@
     </div>
     <div class="MainCard">
         <div class="MusicCard" id="Lagu">
-            <img src="Images/mylove.jpeg" alt="" class="MusicCardImg">
+            <img src="Images/mylove.jpeg" alt="" class="MusicCardImg" id="MyLoveSong">
             <div class="Musics">
                 <p class="MusicCardName">My Love</p>
-                <img src="Images/playimg.png" alt="" class="MusicCardButton" id="MyLoveSong">
+                <!-- <img src="Images/playimg.png" alt="" class="MusicCardButton" id="MyLoveSong"> -->
+            </div>
+        </div>
+
+        <div class="MusicCard" id="Lagu">
+            <img src="Images/berharaptakberpisah.jpeg" alt="" class="MusicCardImg" id="BerharapTakBerpisahSong">
+            <div class="Musics">
+                <p class="MusicCardName">Berharap Tak Berpisah</p>
+                <!-- <img src="Images/playimg.png" alt="" class="MusicCardButton" id="MyLoveSong"> -->
             </div>
         </div>
     </div>
